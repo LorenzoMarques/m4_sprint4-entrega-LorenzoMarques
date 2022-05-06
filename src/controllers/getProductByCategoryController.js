@@ -8,7 +8,6 @@ const getProductByCategoryController = async (request, response) => {
       if (!products[0]) {
         return response.status(400).json({ message: "Product not found" });
       } else {
-        console.log(products);
         return response.status(200).json(products);
       }
     } else {
