@@ -2,8 +2,6 @@ import getProductByCategory from "../services/getProductByCategoryService";
 const getProductByCategoryController = async (request, response) => {
   const { category_id } = request.params;
 
-  console.log(request.params);
-
   try {
     if (category_id) {
       const products = await getProductByCategory(category_id);
